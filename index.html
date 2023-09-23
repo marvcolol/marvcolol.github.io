@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="https://cdn.discordapp.com/attachments/1152332429483327508/1155176781742084196/image.png" property="og:image">
+    <meta content="🦇">
     <meta content="#fcfcfc" data-react-helmet="true" name="theme-color">
     <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1151894203794739210/1152700418627993692/anime.gif">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=manrope@1&amp;display=swap" />
@@ -178,7 +178,7 @@
             animation-timing-function: linear, ease-in-out;
             animation-iteration-count: infinite, infinite;
             animation-play-state: running, running;
-            font-size: 20px; /* Adjust font size */
+            font-size: 20px;
         }
 
         .snowflake:nth-of-type(0) {
@@ -257,15 +257,13 @@
             cursor: url(https://cdn.discordapp.com/attachments/1152332429483327508/1155185783095955546/image.png), auto !important;
         }
 
-        /* Added style for hiding content initially */
         #content {
             display: none;
         }
 
-        /* Center the image */
-        #image-container {
+       #image-container {
             position: absolute;
-            top: 37%; /* Adjust this value as needed */
+            top: 37%;
             left: 0;
             right: 0;
             display: flex;
@@ -290,14 +288,13 @@
     <div class="snowflake">✝</div>
     <div class="snowflake">✝</div>
     <audio id="myAudio" loop>
-        <source src="PULLIN.ogg" type="audio/mpeg">
+        <source src="change.ogg" type="audio/mpeg">
     </audio>
     <div class="content" id="content">
-        <!-- Initially empty div to display the image -->
         <div id="image-container"></div>
     </div>
     <div class="display-button" id="display-button">
-        <img src="https://cdn.discordapp.com/attachments/1152332429483327508/1155176781742084196/image.png" alt="Dance" onclick="playAudio()">
+        <img src="https://cdn.discordapp.com/attachments/1154057682068713523/1155248335809159178/image.png" alt="Dance" onclick="playAudio()" width="75" height="45">>
     </div>
     <script>
         var audio = document.getElementById("myAudio");
@@ -312,21 +309,16 @@
             var content = document.getElementById("content");
             var displayButton = document.getElementById("display-button");
 
-            // Show the content and hide the loading screen
             content.style.display = "block";
             displayButton.style.display = "none";
 
-            // Change the image source
             var image = document.createElement("img");
             image.src = "https://cdn.discordapp.com/attachments/1152332429483327508/1155181638385410108/image.png";
             
-            // Get the image container
             var imageContainer = document.getElementById("image-container");
             
-            // Clear any previous content in the image container
-            imageContainer.innerHTML = "";
+           imageContainer.innerHTML = "";
             
-            // Append the new image to the container
             imageContainer.appendChild(image);
         }
     </script>
