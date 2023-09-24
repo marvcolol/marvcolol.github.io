@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta content="🦇" property="og:title">
-        <meta content="#000001" data-react-helmet="true" name="theme-color">
-        <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1152332429483327508/1155271841582161970/image.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="🦇" property="og:title">
+    <meta content="#000001" data-react-helmet="true" name="theme-color">
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1152332429483327508/1155271841582161970/image.png">
     <style>
         .display-button,
         body {
@@ -260,7 +260,7 @@
             display: none;
         }
 
-       #image-container {
+        #image-container {
             position: absolute;
             top: 37%;
             left: 0;
@@ -272,8 +272,45 @@
     </style>
     <script>
         document.title = "discord.gg/blahajs";
+        
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); 
+
+            var overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0, 0, 0, 0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "9999";
+            overlay.onclick = function() {
+                document.body.removeChild(overlay); 
+            };
+
+            var image = document.createElement("img");
+            image.src = "https://cdn.discordapp.com/attachments/1152332429483327508/1155298215009189898/image.png";
+            overlay.appendChild(image);
+
+            document.body.appendChild(overlay);
+
+            document.addEventListener("mousemove", function(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+
+                image.style.position = "absolute";
+                image.style.top = (y - 50) + "px"; 
+                image.style.left = (x - 50) + "px"; 
+            });
+
+            document.addEventListener("mousemove", function() {
+                document.body.removeChild(overlay);
+            }, { once: true }); 
+        });
     </script>
-    </head>
 </head>
 <body>
     <div class="snowflake">✝</div>
