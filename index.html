@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="🦇" property="og:title">
     <meta content="#000001" data-react-helmet="true" name="theme-color">
     <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1152332429483327508/1155271841582161970/image.png">
@@ -269,6 +269,19 @@
             justify-content: center;
             align-items: center;
         }
+
+        #testButton {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
     </style>
     <script>
         document.title = "discord.gg/blahajs";
@@ -330,8 +343,9 @@
         <div id="image-container"></div>
     </div>
     <div class="display-button" id="display-button">
-        <img src="https://cdn.discordapp.com/attachments/1154057682068713523/1155248335809159178/image.png" alt="Dance" onclick="playAudio()" width="75" height="45">>
+        <img src="https://cdn.discordapp.com/attachments/1154057682068713523/1155248335809159178/image.png" alt="Dance" onclick="playAudio()" width="75" height="45">
     </div>
+    <button id="testButton" onclick="redirectToAnotherLink()">Hall Of Autism</button>
     <script>
         var audio = document.getElementById("myAudio");
 
@@ -344,18 +358,24 @@
 
             var content = document.getElementById("content");
             var displayButton = document.getElementById("display-button");
+            var testButton = document.getElementById("testButton");
 
             content.style.display = "block";
             displayButton.style.display = "none";
+            testButton.style.display = "block";
 
             var image = document.createElement("img");
             image.src = "https://cdn.discordapp.com/attachments/1152332429483327508/1155181638385410108/image.png";
             
             var imageContainer = document.getElementById("image-container");
             
-           imageContainer.innerHTML = "";
+            imageContainer.innerHTML = "";
             
             imageContainer.appendChild(image);
+        }
+
+        function redirectToAnotherLink() {
+            window.location.href = 'https://marvcohoa.github.io';
         }
     </script>
     <div class="center">
