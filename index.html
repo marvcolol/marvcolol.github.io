@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marvco.lol - home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #email {
+            color: #ffffff;
+            font-family: system-ui;
+            margin-top: 1px;
+        }
+
+        #click-to-enter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            transition: background-color 0.3s; 
+	
+
+        }
+
+        #click-to-enter:hover {
+            background-color: rgba(0, 0, 0, 0.5); 
+			
+        }
+
+        #content {
+            background: rgba(0, 0, 0, 0.8);
+            width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        h2 {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            font-family: monospace;
+            justify-content: center;
+			color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0px 0px 2px #ee4b8f, 0px 0px 3px #ee4b8f, 0px 0px 7px #ee4b8f, 0px 0px 5px #ee4b8f, 0px 0px 8px #ee4b8f, 0px 0px 8px #ee4b8f;
+		   
+        }
+
+        h1 {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            font-family: monospace;
+            justify-content: center;
+			
+		
+        }
+		
+	     h6 {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            font-family: monospace;
+            justify-content: center;
+			color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0px 0px 2px #ee4b8f, 0px 0px 3px #ee4b8f, 0px 0px 7px #ee4b8f, 0px 0px 5px #ee4b8f, 0px 0px 8px #ee4b8f, 0px 0px 8px #ee4b8f;
+			align-items: center;
+		   
+        }
+		
+
+        h4 {
+            color: #afafaf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            margin-top: 1px; 
+            margin-bottom: 5px; /* Adjusted margin to bring the text closer */
+			
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1px; 
+        }
+
+        .verified-icon {
+            width: 20px;
+            margin-left: 4px;
+        }
+        .owner-icon {
+            width: 20px;
+            margin-left: 4px;
+        }
+
+        .image-buttons {
+            position: absolute;
+            bottom: 150px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: none; 
+            justify-content: center;
+            width: 100%;
+        }
+
+        .image-button {
+            background-color: rgba(0, 0, 0, 0.8);; 
+            width: 165px; 
+            height: 50px; /* Set height to 1 pixel */
+            margin: 10px; 
+            border: 2px solid transparent; 
+            border-radius: 5px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .image-button img {
+            width: 30px; 
+            height: 30px; 
+        }
+
+        .button-text {
+            color: white; 
+            padding: 15px;
+        }
+		
+      #enter {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -10;
+      }
+
+      .sparkle {
+        background-image: url('../media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif');
+      }
+	  
+	  
+	        footer {
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        line-height: 17px;
+        font-weight: 150;
+        font-size: 9px;
+		
+      }
+	  
+    </style>
+</head>
+<body>
+    <div id="click-to-enter" onclick="playVideo(); showTypewriterAndHeader(); showDiscordIcon();">
+        <h1>[ enter ]</h1>
+    </div>
+
+    <video id="video" loop>
+      <source src="Boujee.mp4" type="video/mp4">
+    </video>
+	
+    <div id="content">
+        <div>
+            <img class="profile-image" src="https://media.discordapp.net/attachments/1124831801232330753/1157697991059177512/UanQZCp.png?ex=653d2646&is=652ab146&hm=0ed7d913f95e660f3ed265cda261553633a83c8a764b4da975935ec0c8e4262b&=&width=320&height=320" alt="Profile Picture">
+            <h2>marvco</h2>
+			<h4>the quieter you talk the more you hear</h4>
+			</div>
+
+        <img src="https://discord.c99.nl/widget/theme-4/721837118946672693.png" alt="Discord Server Widget">
+    </div>
+
+    <div class="image-buttons" id="image-buttons">
+        <a href="">
+            <button class="image-button">
+                <img src="images/discord.png" alt="Button 1">
+                <span class="button-text">/bypassed</span>
+            </button>
+        </a>
+		
+        <a href="">
+            <button class="image-button">
+                <img src="images/roblox.png" alt="Button 1">
+                <span class="button-text">Roblox</span>
+            </button>
+        </a>   
+
+
+    </div>
+	
+
+    <script>
+    
+
+        function showMainContent() {
+            var clickToEnter = document.getElementById("click-to-enter");
+            var mainContent = document.getElementById("content");
+            var audio = document.getElementById("background-audio");
+            var imageButtons = document.getElementById("image-buttons");
+
+            clickToEnter.style.display = "none";
+            mainContent.style.display = "block";
+            imageButtons.style.display = "flex"; 
+
+            audio.play().catch(function(error) {
+                console.error(error);
+            });
+
+
+            typewriterEmail(); // Start the typewriter effect for the email
+            var titleElement = document.querySelector("title");
+            var index = 0;
+
+            function updateTitle() {
+                titleElement.textContent = titleText.slice(0, index + 1);
+                index = (index + 1) % titleText.length;
+            }
+
+            setInterval(updateTitle, 750); // Update every second
+        }
+
+        var clickToEnter = document.getElementById("click-to-enter");
+        clickToEnter.addEventListener("click", showMainContent);
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+		
+		      function playVideo() {
+        var overlay = document.getElementById("overlay");
+        overlay.classList.add("hidden");
+
+        var video = document.getElementById("video");
+        video.style.display = "block";
+        video.play();
+      }
+
+      function showTypewriterAndHeader() {
+        var typewriter = document.querySelector('.typewriter');
+        typewriter.style.display = "block";
+
+        var header = document.querySelector('.header');
+        header.style.display = "block";
+      }
+
+      function showDiscordIcon() {
+        var linkContainer = document.getElementById("link-container");
+        linkContainer.style.opacity = 1;
+      }
+
+      function navigateTo(url) {
+        window.open(url, '_blank');
+      }
+		
+		
+		
+    </script>
+	
+	
+	
+
+	<script src="c/js/cursor.js"></script>
+    <script src="c/js/overlay.js"></script>
+    <script src="c/js/enter.js"></script>
+    <script src="c/js/llook.js"></script>
+    <script src="c/js/videoenter.js"></script>
+    <script src="c/js/antiskid.js"></script>
+	
+</body>
+</html>
